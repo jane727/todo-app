@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+/*Reset*/
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body {
+    font-family: 'Pretendard';
+    font-size: 62.25%;
+    letter-spacing: -0.05em;
+    background-color: #0a192f;
+    overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ol,ul,li {
+    list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+    text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+img {
+    display: block;
+    max-width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+    background:transparent;
+    border:transparent;
+    cursor: pointer;
+}
+
+*::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #0a192f;
+    border-radius: 0;
+}
+
+.wrap {
+    background:#ccc;
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width:350px;
+    margin: auto;
+    border-radius:15px;
+    overflow: hidden;
+    box-shadow:5px 5px 10px rgba(0,0,0,0.4);
+}
+
+.header {
+    width:100%;
+    background:#24253d;
+    display:flex;
+    justify-content: space-between;
+    line-height: 3em;
+    font-size: 3em;
+    padding:0.2em 0.5em;
+    border-bottom:1px solid rgba(26, 26, 34, 0.8)
+}
+
+.toggle-mode {
+    display:block;
+    color:white;
+    width: 3em;
+}
+.category button {
+    color:white;
+    font-weight:bold;
+    color:orange;
+    margin:0.5em;
+    display:inline-block;
+}
+
+.todo-list {
+    background:#363853;
+    color:white;
+    padding:1em;
+    margin:0;
+    font-size:2.5em;
+}
+.todo-list li {
+    display:flex;
+    align-items: flex-start;
+    margin-bottom:0.5em;
+}
+.todo-list li .checkBtn {
+    margin-right:0.5em;
+    width:1.2em;
+    margin-top:0.5em;
+}
+.todo-list li .checkBtn:checked + .content {
+    text-decoration:line-through;
+}
+
+.todo-list li .content {
+    word-wrap:break-word;
+    display:block;
+    width:calc(100% - 2.4em);
+    margin-top: 0.3em;
+}
+.todo-list li .deleteBtn {
+    width:2em;
+    height:2em;
+    color:white;
+    border-radius:100%;
+    background:#676767;
+}
+
+.todo-add {
+    display:flex;
+    padding:2em;
+    background:#24253d;
+    justify-items: center;
+}
+
+.todo-add input {
+    width:calc(100% - 80px);
+    border:0;
+    border-radius:5px 0 0 5px;
+    padding:0 1em;
+}
+
+.bottom .addBtn {
+    background:orange;
+    color:white;
+    font-weight:bold;
+    padding:0.7em 1.4em;
+    width:80px;
+    border-radius:0 5px 5px 0;
+    transition:all 0.3s;
+}
+
+.bottom .addBtn:hover, .bottom .addBtn:active {
+    background:#ff9100;
 }
